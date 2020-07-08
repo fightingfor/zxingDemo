@@ -32,24 +32,12 @@
         "source": "E:\\saoyisao\\zingDemo\\android\\src\\main\\res\\drawable\\share_via_barcode.png"
     },
     {
-        "merged": "E:\\saoyisao\\zingDemo\\android\\build\\intermediates\\res\\merged\\debug\\layout-land_encode.xml.flat",
-        "source": "E:\\saoyisao\\zingDemo\\android\\src\\main\\res\\layout-land\\encode.xml"
-    },
-    {
-        "merged": "E:\\saoyisao\\zingDemo\\android\\build\\intermediates\\res\\merged\\debug\\layout-ldpi_capture.xml.flat",
-        "source": "E:\\saoyisao\\zingDemo\\android\\src\\main\\res\\layout-ldpi\\capture.xml"
-    },
-    {
         "merged": "E:\\saoyisao\\zingDemo\\android\\build\\intermediates\\res\\merged\\debug\\drawable_launcher_icon.png.flat",
         "source": "E:\\saoyisao\\zingDemo\\android\\src\\main\\res\\drawable\\launcher_icon.png"
     },
     {
         "merged": "E:\\saoyisao\\zingDemo\\android\\build\\intermediates\\res\\merged\\debug\\layout_search_book_contents_list_item.xml.flat",
         "source": "E:\\saoyisao\\zingDemo\\android\\src\\main\\res\\layout\\search_book_contents_list_item.xml"
-    },
-    {
-        "merged": "E:\\saoyisao\\zingDemo\\android\\build\\intermediates\\res\\merged\\debug\\layout-land_share.xml.flat",
-        "source": "E:\\saoyisao\\zingDemo\\android\\src\\main\\res\\layout-land\\share.xml"
     },
     {
         "merged": "E:\\saoyisao\\zingDemo\\android\\build\\intermediates\\res\\merged\\debug\\xml_preferences.xml.flat",

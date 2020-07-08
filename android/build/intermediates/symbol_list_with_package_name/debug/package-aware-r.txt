@@ -697,7 +697,6 @@ id always
 id app_picker_list_item_icon
 id app_picker_list_item_label
 id async
-id barcode_image_view
 id beginning
 id blocking
 id bookmark_title
@@ -711,7 +710,6 @@ id chronometer
 id collapseActionView
 id content
 id contentPanel
-id contents_supplement_text_view
 id contents_text_view
 id custom
 id customPanel
@@ -727,7 +725,6 @@ id end
 id expand_activities_button
 id expanded_menu
 id forever
-id format_text_view
 id group_divider
 id help_contents
 id history_detail
@@ -754,8 +751,6 @@ id menu_history_send
 id menu_settings
 id menu_share
 id message
-id meta_text_view
-id meta_text_view_label
 id middle
 id multiply
 id never
@@ -776,7 +771,6 @@ id query_text_view
 id quit
 id radio
 id restart_preview
-id result_button_view
 id result_list_view
 id result_view
 id return_scan_result
@@ -829,13 +823,11 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id time
-id time_text_view
 id title
 id titleDividerNoCustom
 id title_template
 id top
 id topPanel
-id type_text_view
 id unchecked
 id uniform
 id up

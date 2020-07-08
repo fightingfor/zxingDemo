@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
-INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
-INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
-INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-148:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-148:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-148:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-148:12
 MERGED from [:core] E:\saoyisao\zingDemo\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:androidcore] E:\saoyisao\zingDemo\androidcore\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\eddd3afdd70de58f8cd62a2efe1aaa1b\jetified-core-ktx-1.3.0\AndroidManifest.xml:2:1-9:12
@@ -27,9 +27,9 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\c20b3a9c01fac1c58487516ff423d6b0\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\68a64a089b7f098f26bb791f76de8be0\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\24d5b49fe2b36ef44f901a0f8118cef3\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
-INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
-INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-148:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-148:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-148:12
 	package
 		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:17:5-46
 		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
@@ -109,7 +109,7 @@ ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:43:5-45:36
 	android:name
 		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:44:9-45
 application
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-176:19
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-146:19
 MERGED from [androidx.core:core:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b741faf0c0e978004788a3922a8a438d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
@@ -127,7 +127,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ad
 activity#com.google.zxing.client.android.CaptureActivity
 ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:52:9-115:20
 	android:screenOrientation
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:55:13-56
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:55:13-50
 	android:clearTaskOnLaunch
 		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:54:13-45
 	android:stateNotNeeded
@@ -212,70 +212,16 @@ ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:129:17-69
 		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:129:25-66
 intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:text/plain
 ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:134:13-138:29
-activity#com.google.zxing.client.android.book.SearchBookContentsActivity
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:140:9-149:20
-	android:screenOrientation
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:143:13-56
-	android:stateNotNeeded
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:144:13-42
-	android:label
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:142:13-45
-	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:141:13-60
-intent-filter#action:name:com.google.zxing.client.android.SEARCH_BOOK_CONTENTS+category:name:android.intent.category.DEFAULT
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:145:13-148:29
-action#com.google.zxing.client.android.SEARCH_BOOK_CONTENTS
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:146:17-95
-	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:146:25-92
-activity#com.google.zxing.client.android.share.ShareActivity
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:150:9-158:20
-	android:screenOrientation
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:152:13-45
-	android:stateNotNeeded
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:153:13-42
-	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:151:13-48
-intent-filter#action:name:com.google.zxing.client.android.SHARE+category:name:android.intent.category.DEFAULT
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:154:13-157:29
-action#com.google.zxing.client.android.SHARE
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:155:17-80
-	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:155:25-77
-activity#com.google.zxing.client.android.history.HistoryActivity
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:159:9-162:45
-	android:stateNotNeeded
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:162:13-42
-	android:label
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:161:13-50
-	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:160:13-52
-activity#com.google.zxing.client.android.share.BookmarkPickerActivity
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:163:9-166:45
-	android:stateNotNeeded
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:166:13-42
-	android:label
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:165:13-57
-	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:164:13-57
-activity#com.google.zxing.client.android.share.AppPickerActivity
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:167:9-170:45
-	android:stateNotNeeded
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:170:13-42
-	android:label
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:169:13-52
-	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:168:13-52
 activity#com.google.zxing.client.android.HelpActivity
-ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:171:9-175:45
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:141:9-145:45
 	android:screenOrientation
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:174:13-45
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:144:13-45
 	android:stateNotNeeded
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:175:13-42
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:145:13-42
 	android:label
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:173:13-46
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:143:13-46
 	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:172:13-41
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:142:13-41
 uses-sdk
 INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml

@@ -83,7 +83,7 @@
 50-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:45:9-33
 51
 52    <application
-52-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-176:19
+52-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-146:19
 53        android:allowBackup="true"
 53-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:48:9-35
 54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -102,8 +102,8 @@
 61-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:53:13-44
 62            android:clearTaskOnLaunch="true"
 62-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:54:13-45
-63            android:screenOrientation="sensorLandscape"
-63-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:55:13-56
+63            android:screenOrientation="landscape"
+63-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:55:13-50
 64            android:stateNotNeeded="true"
 64-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:56:13-42
 65            android:theme="@style/CaptureTheme"
@@ -279,79 +279,15 @@
 153            </intent-filter>
 154        </activity>
 155        <activity
-155-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:140:9-149:20
-156            android:name="com.google.zxing.client.android.book.SearchBookContentsActivity"
-156-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:141:13-60
-157            android:label="@string/sbc_name"
-157-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:142:13-45
-158            android:screenOrientation="sensorLandscape"
-158-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:143:13-56
-159            android:stateNotNeeded="true" >
-159-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:144:13-42
-160            <intent-filter>
-160-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:145:13-148:29
-161                <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS" />
-161-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:146:17-95
-161-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:146:25-92
-162
-163                <category android:name="android.intent.category.DEFAULT" />
-163-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:17-76
-163-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:27-73
-164            </intent-filter>
-165        </activity>
-166        <activity
-166-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:150:9-158:20
-167            android:name="com.google.zxing.client.android.share.ShareActivity"
-167-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:151:13-48
-168            android:screenOrientation="user"
-168-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:152:13-45
-169            android:stateNotNeeded="true" >
-169-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:153:13-42
-170            <intent-filter>
-170-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:154:13-157:29
-171                <action android:name="com.google.zxing.client.android.SHARE" />
-171-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:155:17-80
-171-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:155:25-77
-172
-173                <category android:name="android.intent.category.DEFAULT" />
-173-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:17-76
-173-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:27-73
-174            </intent-filter>
-175        </activity>
-176        <activity
-176-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:159:9-162:45
-177            android:name="com.google.zxing.client.android.history.HistoryActivity"
-177-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:160:13-52
-178            android:label="@string/history_title"
-178-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:161:13-50
-179            android:stateNotNeeded="true" />
-179-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:162:13-42
-180        <activity
-180-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:163:9-166:45
-181            android:name="com.google.zxing.client.android.share.BookmarkPickerActivity"
-181-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:164:13-57
-182            android:label="@string/bookmark_picker_name"
-182-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:165:13-57
-183            android:stateNotNeeded="true" />
-183-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:166:13-42
-184        <activity
-184-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:167:9-170:45
-185            android:name="com.google.zxing.client.android.share.AppPickerActivity"
-185-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:168:13-52
-186            android:label="@string/app_picker_name"
-186-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:169:13-52
-187            android:stateNotNeeded="true" />
-187-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:170:13-42
-188        <activity
-188-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:171:9-175:45
-189            android:name="com.google.zxing.client.android.HelpActivity"
-189-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:172:13-41
-190            android:label="@string/menu_help"
-190-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:173:13-46
-191            android:screenOrientation="user"
-191-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:174:13-45
-192            android:stateNotNeeded="true" />
-192-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:175:13-42
-193    </application>
-194
-195</manifest>
+155-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:141:9-145:45
+156            android:name="com.google.zxing.client.android.HelpActivity"
+156-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:142:13-41
+157            android:label="@string/menu_help"
+157-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:143:13-46
+158            android:screenOrientation="user"
+158-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:144:13-45
+159            android:stateNotNeeded="true" />
+159-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:145:13-42
+160    </application>
+161
+162</manifest>
