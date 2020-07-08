@@ -1,0 +1,338 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+MERGED from [:core] E:\saoyisao\zingDemo\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:androidcore] E:\saoyisao\zingDemo\androidcore\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\eddd3afdd70de58f8cd62a2efe1aaa1b\jetified-core-ktx-1.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\e46f3e16fd8948e8e4c48c913cb404d3\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\7619667f73099691456e81e3fedf8086\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8bdc78f309f7ef2e274359e8a4f096da\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\f66fa33308b0619d349f33f29e1b9234\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\1570490a9aefa8bf7c72c2091e5007e6\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\c38deefe61a4b29c2fedadb5cb828cb9\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\cb7465d23e93e74bedcba12369934f8a\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\721dcdb357351f758b5df456f00974d6\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\5449d447cecb7a5b7105df425966ce92\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\4bf5efb9c6ca1cc1042b4ed281aac9d8\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b37b2aeed146cfc3b1274c4cf21d4028\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b741faf0c0e978004788a3922a8a438d\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8164904e8dbba255593df041e8bd30ea\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\59c8a6e28f96474652a981d6333afcdf\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\3a332f7b3ba12f0d97b1eff5486f8fcf\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\32691ed1dd96a709bdd6754d66b7ebfd\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\c20b3a9c01fac1c58487516ff423d6b0\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\68a64a089b7f098f26bb791f76de8be0\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\24d5b49fe2b36ef44f901a0f8118cef3\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:1-178:12
+	package
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:17:5-46
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:20:5-32
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:16:11-69
+	android:versionCode
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:19:5-30
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+	android:installLocation
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:18:5-35
+uses-permission#android.permission.CAMERA
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:22:5-65
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:22:22-62
+uses-permission#android.permission.INTERNET
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:23:22-64
+uses-permission#android.permission.VIBRATE
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:24:5-66
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:24:22-63
+uses-permission#android.permission.FLASHLIGHT
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:25:5-69
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:25:22-66
+uses-permission#android.permission.READ_CONTACTS
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:26:5-72
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:26:22-69
+uses-permission#com.android.browser.permission.READ_HISTORY_BOOKMARKS
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:28:5-93
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:28:22-90
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:29:5-81
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:29:22-78
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:30:5-76
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:30:22-73
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:31:5-76
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:31:22-73
+uses-feature#android.hardware.camera.any
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:35:5-64
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:35:19-61
+uses-feature#android.hardware.camera.autofocus
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:36:5-38:36
+	android:required
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:38:9-33
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:37:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:39:5-41:36
+	android:required
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:41:9-33
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:40:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:42:5-70
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:42:19-67
+uses-feature#android.hardware.wifi
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:43:5-45:36
+	android:required
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:45:9-33
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:44:9-45
+application
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-176:19
+MERGED from [androidx.core:core:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b741faf0c0e978004788a3922a8a438d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b741faf0c0e978004788a3922a8a438d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:50:9-41
+	android:icon
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:49:9-47
+	android:allowBackup
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:48:9-35
+	android:logo
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:51:9-47
+activity#com.google.zxing.client.android.CaptureActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:52:9-115:20
+	android:screenOrientation
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:55:13-56
+	android:clearTaskOnLaunch
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:54:13-45
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:56:13-42
+	android:windowSoftInputMode
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:58:13-60
+	android:theme
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:57:13-48
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:53:13-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:59:13-62:29
+action#android.intent.action.MAIN
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:60:17-69
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:60:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:61:17-77
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:61:27-74
+intent-filter#action:name:com.google.zxing.client.android.SCAN+category:name:android.intent.category.DEFAULT
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:63:13-66:29
+action#com.google.zxing.client.android.SCAN
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:64:17-79
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:64:25-76
+category#android.intent.category.DEFAULT
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:17-76
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:27-73
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:zxing.appspot.com+data:path:/scan+data:scheme:http
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:68:13-78:29
+action#android.intent.action.VIEW
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:69:17-69
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:69:25-66
+category#android.intent.category.BROWSABLE
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:72:17-78
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:72:27-75
+data
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:74:17-77:45
+	android:path
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:76:21-41
+	android:host
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:75:21-53
+	android:scheme
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:77:21-42
+	android:mimeType
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:131:23-54
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:www.google.com+data:path:/m/products/scan+data:scheme:http
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:80:13-90:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:www.google.co.uk+data:path:/m/products/scan+data:scheme:http
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:92:13-102:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:scan+data:path:/+data:scheme:zxing
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:104:13-114:29
+activity#com.google.zxing.client.android.PreferencesActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:116:9-119:45
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:119:13-42
+	android:label
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:118:13-53
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:117:13-48
+activity#com.google.zxing.client.android.encode.EncodeActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:120:9-139:20
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:122:13-42
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:121:13-50
+intent-filter#action:name:com.google.zxing.client.android.ENCODE+category:name:android.intent.category.DEFAULT
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:123:13-126:29
+action#com.google.zxing.client.android.ENCODE
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:124:17-81
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:124:25-78
+intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:text/x-vcard
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:128:13-132:29
+action#android.intent.action.SEND
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:129:17-69
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:129:25-66
+intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:text/plain
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:134:13-138:29
+activity#com.google.zxing.client.android.book.SearchBookContentsActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:140:9-149:20
+	android:screenOrientation
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:143:13-56
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:144:13-42
+	android:label
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:142:13-45
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:141:13-60
+intent-filter#action:name:com.google.zxing.client.android.SEARCH_BOOK_CONTENTS+category:name:android.intent.category.DEFAULT
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:145:13-148:29
+action#com.google.zxing.client.android.SEARCH_BOOK_CONTENTS
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:146:17-95
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:146:25-92
+activity#com.google.zxing.client.android.share.ShareActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:150:9-158:20
+	android:screenOrientation
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:152:13-45
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:153:13-42
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:151:13-48
+intent-filter#action:name:com.google.zxing.client.android.SHARE+category:name:android.intent.category.DEFAULT
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:154:13-157:29
+action#com.google.zxing.client.android.SHARE
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:155:17-80
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:155:25-77
+activity#com.google.zxing.client.android.history.HistoryActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:159:9-162:45
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:162:13-42
+	android:label
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:161:13-50
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:160:13-52
+activity#com.google.zxing.client.android.share.BookmarkPickerActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:163:9-166:45
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:166:13-42
+	android:label
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:165:13-57
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:164:13-57
+activity#com.google.zxing.client.android.share.AppPickerActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:167:9-170:45
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:170:13-42
+	android:label
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:169:13-52
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:168:13-52
+activity#com.google.zxing.client.android.HelpActivity
+ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:171:9-175:45
+	android:screenOrientation
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:174:13-45
+	android:stateNotNeeded
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:175:13-42
+	android:label
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:173:13-46
+	android:name
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:172:13-41
+uses-sdk
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+MERGED from [:core] E:\saoyisao\zingDemo\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:core] E:\saoyisao\zingDemo\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:androidcore] E:\saoyisao\zingDemo\androidcore\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:androidcore] E:\saoyisao\zingDemo\androidcore\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\eddd3afdd70de58f8cd62a2efe1aaa1b\jetified-core-ktx-1.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\eddd3afdd70de58f8cd62a2efe1aaa1b\jetified-core-ktx-1.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\e46f3e16fd8948e8e4c48c913cb404d3\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\e46f3e16fd8948e8e4c48c913cb404d3\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\7619667f73099691456e81e3fedf8086\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\7619667f73099691456e81e3fedf8086\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8bdc78f309f7ef2e274359e8a4f096da\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8bdc78f309f7ef2e274359e8a4f096da\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\f66fa33308b0619d349f33f29e1b9234\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\f66fa33308b0619d349f33f29e1b9234\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\1570490a9aefa8bf7c72c2091e5007e6\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\1570490a9aefa8bf7c72c2091e5007e6\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\c38deefe61a4b29c2fedadb5cb828cb9\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\c38deefe61a4b29c2fedadb5cb828cb9\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\cb7465d23e93e74bedcba12369934f8a\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\cb7465d23e93e74bedcba12369934f8a\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\721dcdb357351f758b5df456f00974d6\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\721dcdb357351f758b5df456f00974d6\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\5449d447cecb7a5b7105df425966ce92\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\5449d447cecb7a5b7105df425966ce92\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\4bf5efb9c6ca1cc1042b4ed281aac9d8\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\4bf5efb9c6ca1cc1042b4ed281aac9d8\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8106c9afeb27cc0c50f85995740f877c\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b37b2aeed146cfc3b1274c4cf21d4028\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b37b2aeed146cfc3b1274c4cf21d4028\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b741faf0c0e978004788a3922a8a438d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b741faf0c0e978004788a3922a8a438d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8164904e8dbba255593df041e8bd30ea\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8164904e8dbba255593df041e8bd30ea\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\59c8a6e28f96474652a981d6333afcdf\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\59c8a6e28f96474652a981d6333afcdf\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\3a332f7b3ba12f0d97b1eff5486f8fcf\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\3a332f7b3ba12f0d97b1eff5486f8fcf\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\32691ed1dd96a709bdd6754d66b7ebfd\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\32691ed1dd96a709bdd6754d66b7ebfd\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\c20b3a9c01fac1c58487516ff423d6b0\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\c20b3a9c01fac1c58487516ff423d6b0\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\68a64a089b7f098f26bb791f76de8be0\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\68a64a089b7f098f26bb791f76de8be0\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\24d5b49fe2b36ef44f901a0f8118cef3\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\24d5b49fe2b36ef44f901a0f8118cef3\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml
+		INJECTED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml

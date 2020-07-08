@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.google.zxing.client.android",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "INSTANT_APP_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 108,
+        "versionName": "4.7.8",
+        "outputFile": "android-debug.apk",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.google.zxing.client.android",
+        "split": "",
+        "minSdkVersion": "19"
+      }
+    }
+  ]
+}
