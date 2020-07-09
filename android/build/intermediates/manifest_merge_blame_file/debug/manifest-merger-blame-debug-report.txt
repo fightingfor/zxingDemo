@@ -83,7 +83,7 @@
 50-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:45:9-33
 51
 52    <application
-52-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-146:19
+52-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-121:19
 53        android:allowBackup="true"
 53-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:48:9-35
 54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -231,63 +231,6 @@
 128-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:118:13-53
 129            android:stateNotNeeded="true" />
 129-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:119:13-42
-130        <activity
-130-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:120:9-139:20
-131            android:name="com.google.zxing.client.android.encode.EncodeActivity"
-131-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:121:13-50
-132            android:stateNotNeeded="true" >
-132-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:122:13-42
-133            <intent-filter>
-133-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:123:13-126:29
-134                <action android:name="com.google.zxing.client.android.ENCODE" />
-134-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:124:17-81
-134-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:124:25-78
-135
-136                <category android:name="android.intent.category.DEFAULT" />
-136-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:17-76
-136-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:27-73
-137            </intent-filter>
-138            <!-- This allows us to handle the Share button in Contacts. -->
-139            <intent-filter>
-139-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:128:13-132:29
-140                <action android:name="android.intent.action.SEND" />
-140-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:129:17-69
-140-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:129:25-66
-141
-142                <category android:name="android.intent.category.DEFAULT" />
-142-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:17-76
-142-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:27-73
-143
-144                <data android:mimeType="text/x-vcard" />
-144-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:74:17-77:45
-144-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:131:23-54
-145            </intent-filter>
-146            <!-- This allows us to handle sharing any plain text . -->
-147            <intent-filter>
-147-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:134:13-138:29
-148                <action android:name="android.intent.action.SEND" />
-148-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:129:17-69
-148-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:129:25-66
-149
-150                <category android:name="android.intent.category.DEFAULT" />
-150-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:17-76
-150-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:65:27-73
-151
-152                <data android:mimeType="text/plain" />
-152-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:74:17-77:45
-152-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:131:23-54
-153            </intent-filter>
-154        </activity>
-155        <activity
-155-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:141:9-145:45
-156            android:name="com.google.zxing.client.android.HelpActivity"
-156-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:142:13-41
-157            android:label="@string/menu_help"
-157-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:143:13-46
-158            android:screenOrientation="user"
-158-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:144:13-45
-159            android:stateNotNeeded="true" />
-159-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:145:13-42
-160    </application>
-161
-162</manifest>
+130    </application>
+131
+132</manifest>
