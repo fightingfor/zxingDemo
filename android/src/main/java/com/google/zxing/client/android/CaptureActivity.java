@@ -38,7 +38,9 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import com.google.zxing.client.android.camera.CameraManager;
 import com.google.zxing.client.android.result.ResultHandler;
-import com.google.zxing.client.android.result.ResultHandlerFactory;
+import com.google.zxing.client.android.result.URIResultHandler;
+import com.google.zxing.client.result.ParsedResult;
+import com.google.zxing.client.result.ResultParser;
 
 import java.util.Collection;
 
@@ -231,7 +233,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   public void handleDecode(Result rawResult, Bitmap barcode, float scaleFactor) {
     inactivityTimer.onActivity();
     lastResult = rawResult;
-    ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, rawResult);
+    ParsedResult result = ResultParser.parseResult(rawResult);
+    ResultHandler resultHandler = new URIResultHandler(this, result);
     handleDecodeInternally(rawResult, resultHandler, barcode);
   }
 
