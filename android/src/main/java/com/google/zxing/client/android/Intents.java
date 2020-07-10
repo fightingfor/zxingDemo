@@ -207,12 +207,7 @@ public final class Intents {
      * just use a String here. For QR Code, see Contents for details.
      */
     public static final String DATA = "ENCODE_DATA";
-
-    /**
-     * The type of data being supplied if the format is QR Code. Use
-     * {@link android.content.Intent#putExtra(String, String)} with one of {@link Contents.Type}.
-     */
-    public static final String TYPE = "ENCODE_TYPE";
+    
 
     /**
      * The barcode format to be displayed. If this isn't specified or is blank,

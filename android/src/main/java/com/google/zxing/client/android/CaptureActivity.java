@@ -82,7 +82,13 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   CameraManager getCameraManager() {
     return cameraManager;
   }
+  enum IntentSource {
 
+    NATIVE_APP_INTENT,
+    ZXING_LINK,
+    NONE
+
+  }
   @Override
   public void onCreate(Bundle icicle) {
     super.onCreate(icicle);
@@ -268,7 +274,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       }
       decodeOrStoreSavedBitmap(null, null);
     } catch (Exception ioe) {
-      Toast.makeText(this,"开启相机失败",Toast.LENGTH_LONG).show();
     }
   }
   public void restartPreviewAfterDelay(long delayMS) {
