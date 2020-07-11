@@ -45,6 +45,7 @@ final class PreviewCallback implements Camera.PreviewCallback {
     Point cameraResolution = configManager.getCameraResolution();
     Handler thePreviewHandler = previewHandler;
     if (cameraResolution != null && thePreviewHandler != null) {
+      //拿到一帧预览画面数据，回传给handler处理
       Message message = thePreviewHandler.obtainMessage(previewMessage, cameraResolution.x,
           cameraResolution.y, data);
       message.sendToTarget();

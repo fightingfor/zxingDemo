@@ -83,7 +83,7 @@
 50-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:45:9-33
 51
 52    <application
-52-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-121:19
+52-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:47:5-117:19
 53        android:allowBackup="true"
 53-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:48:9-35
 54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -102,8 +102,8 @@
 61-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:53:13-44
 62            android:clearTaskOnLaunch="true"
 62-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:54:13-45
-63            android:screenOrientation="landscape"
-63-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:55:13-50
+63            android:screenOrientation="portrait"
+63-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:55:13-49
 64            android:stateNotNeeded="true"
 64-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:56:13-42
 65            android:theme="@style/CaptureTheme"
@@ -223,14 +223,6 @@
 123-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:77:21-42
 124            </intent-filter>
 125        </activity>
-126        <activity
-126-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:116:9-119:45
-127            android:name="com.google.zxing.client.android.PreferencesActivity"
-127-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:117:13-48
-128            android:label="@string/preferences_name"
-128-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:118:13-53
-129            android:stateNotNeeded="true" />
-129-->E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:119:13-42
-130    </application>
-131
-132</manifest>
+126    </application>
+127
+128</manifest>

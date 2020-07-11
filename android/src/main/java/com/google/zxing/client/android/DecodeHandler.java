@@ -56,6 +56,8 @@ final class DecodeHandler extends Handler {
     }
     switch (message.what) {
       case R.id.decode:
+        //一帧预览图像的数据就是先传递到这里
+        //decode进行图像解码
         decode((byte[]) message.obj, message.arg1, message.arg2);
         break;
       case R.id.quit:
@@ -76,6 +78,18 @@ final class DecodeHandler extends Handler {
   private void decode(byte[] data, int width, int height) {
     long start = System.nanoTime();
     Result rawResult = null;
+
+    //竖屏
+    byte[] rotatedData = new byte[data.length];
+    for (int y = 0; y < height; y++) {
+      for (int x = 0; x < width; x++)
+        rotatedData[x * height + height - y - 1] = data[x + y * width];
+    }
+    int tmp = width; // Here we are swapping, that's the difference to #11
+    width = height;
+    height = tmp;
+    data = rotatedData;
+
     PlanarYUVLuminanceSource source = activity.getCameraManager().buildLuminanceSource(data, width, height);
     if (source != null) {
       BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
@@ -87,13 +101,14 @@ final class DecodeHandler extends Handler {
         multiFormatReader.reset();
       }
     }
-
+    //获取主线程的handler，解码完成的结果传递到主线程处理
     Handler handler = activity.getHandler();
     if (rawResult != null) {
       // Don't log the barcode contents for security.
       long end = System.nanoTime();
       Log.d(TAG, "Found barcode in " + TimeUnit.NANOSECONDS.toMillis(end - start) + " ms");
       if (handler != null) {
+        //解码成功，解码完成的结果传递到主线程处理
         Message message = Message.obtain(handler, R.id.decode_succeeded, rawResult);
         Bundle bundle = new Bundle();
         bundleThumbnail(source, bundle);        

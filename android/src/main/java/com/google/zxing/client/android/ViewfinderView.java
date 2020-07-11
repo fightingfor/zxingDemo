@@ -165,16 +165,6 @@ public final class ViewfinderView extends View {
     invalidate();
   }
 
-  /**
-   * Draw a bitmap with the result points highlighted instead of the live scanning display.
-   *
-   * @param barcode An image of the decoded barcode.
-   */
-  public void drawResultBitmap(Bitmap barcode) {
-    resultBitmap = barcode;
-    invalidate();
-  }
-
   public void addPossibleResultPoint(ResultPoint point) {
     List<ResultPoint> points = possibleResultPoints;
     synchronized (points) {

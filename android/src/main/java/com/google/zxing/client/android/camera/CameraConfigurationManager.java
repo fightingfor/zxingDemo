@@ -26,7 +26,7 @@ import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
 
-import com.google.zxing.client.android.PreferencesActivity;
+import com.google.zxing.client.android.PreferencesManager;
 import com.google.zxing.client.android.camera.open.CameraFacing;
 import com.google.zxing.client.android.camera.open.OpenCamera;
 
@@ -122,6 +122,15 @@ final class CameraConfigurationManager {
     display.getSize(theScreenResolution);
     screenResolution = theScreenResolution;
     Log.i(TAG, "Screen resolution in current orientation: " + screenResolution);
+    //为竖屏添加
+    Point screenResolutionForCamera = new Point();
+    screenResolutionForCamera.x = screenResolution.x;
+    screenResolutionForCamera.y = screenResolution.y;
+    if (screenResolution.x < screenResolution.y) {
+      screenResolutionForCamera.x = screenResolution.y;
+      screenResolutionForCamera.y = screenResolution.x;
+    }
+
     cameraResolution = CameraConfigurationUtils.findBestPreviewSizeValue(parameters, screenResolution);
     Log.i(TAG, "Camera resolution: " + cameraResolution);
     bestPreviewSize = CameraConfigurationUtils.findBestPreviewSizeValue(parameters, screenResolution);
@@ -165,15 +174,15 @@ final class CameraConfigurationManager {
         safeMode);
 
     if (!safeMode) {
-      if (prefs.getBoolean(PreferencesActivity.KEY_INVERT_SCAN, false)) {
+      if (prefs.getBoolean(PreferencesManager.KEY_INVERT_SCAN, false)) {
         CameraConfigurationUtils.setInvertColor(parameters);
       }
 
-      if (!prefs.getBoolean(PreferencesActivity.KEY_DISABLE_BARCODE_SCENE_MODE, true)) {
+      if (!prefs.getBoolean(PreferencesManager.KEY_DISABLE_BARCODE_SCENE_MODE, true)) {
         CameraConfigurationUtils.setBarcodeSceneMode(parameters);
       }
 
-      if (!prefs.getBoolean(PreferencesActivity.KEY_DISABLE_METERING, true)) {
+      if (!prefs.getBoolean(PreferencesManager.KEY_DISABLE_METERING, true)) {
         CameraConfigurationUtils.setVideoStabilization(parameters);
         CameraConfigurationUtils.setFocusArea(parameters);
         CameraConfigurationUtils.setMetering(parameters);
@@ -248,7 +257,7 @@ final class CameraConfigurationManager {
   private void doSetTorch(Camera.Parameters parameters, boolean newSetting, boolean safeMode) {
     CameraConfigurationUtils.setTorch(parameters, newSetting);
     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-    if (!safeMode && !prefs.getBoolean(PreferencesActivity.KEY_DISABLE_EXPOSURE, true)) {
+    if (!safeMode && !prefs.getBoolean(PreferencesManager.KEY_DISABLE_EXPOSURE, true)) {
       CameraConfigurationUtils.setBestExposure(parameters, newSetting);
     }
   }

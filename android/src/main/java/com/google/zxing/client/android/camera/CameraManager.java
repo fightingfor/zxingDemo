@@ -199,7 +199,9 @@ public final class CameraManager {
   public synchronized void requestPreviewFrame(Handler handler, int message) {
     OpenCamera theCamera = camera;
     if (theCamera != null && previewing) {
+      //传decodeThread的handler到previewCallback
       previewCallback.setHandler(handler, message);
+      //请求camera的一帧预览画面
       theCamera.getCamera().setOneShotPreviewCallback(previewCallback);
     }
   }
@@ -260,10 +262,18 @@ public final class CameraManager {
         // Called early, before init even finished
         return null;
       }
-      rect.left = rect.left * cameraResolution.x / screenResolution.x;
-      rect.right = rect.right * cameraResolution.x / screenResolution.x;
-      rect.top = rect.top * cameraResolution.y / screenResolution.y;
-      rect.bottom = rect.bottom * cameraResolution.y / screenResolution.y;
+//      横屏
+//      rect.left = rect.left * cameraResolution.x / screenResolution.x;
+//      rect.right = rect.right * cameraResolution.x / screenResolution.x;
+//      rect.top = rect.top * cameraResolution.y / screenResolution.y;
+//      rect.bottom = rect.bottom * cameraResolution.y / screenResolution.y;
+
+//      竖屏
+      rect.left = rect.left * cameraResolution.y / screenResolution.x;
+      rect.right = rect.right * cameraResolution.y / screenResolution.x;
+      rect.top = rect.top * cameraResolution.x / screenResolution.y;
+      rect.bottom = rect.bottom * cameraResolution.x / screenResolution.y;
+
       framingRectInPreview = rect;
     }
     return framingRectInPreview;

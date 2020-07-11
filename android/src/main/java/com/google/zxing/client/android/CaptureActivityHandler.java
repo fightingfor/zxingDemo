@@ -64,6 +64,7 @@ public final class CaptureActivityHandler extends Handler {
                          String characterSet,
                          CameraManager cameraManager) {
     this.activity = activity;
+//    开启一个解码线程
     decodeThread = new DecodeThread(activity, decodeFormats, baseHints, characterSet,
         new ViewfinderResultPointCallback(activity.getViewfinderView()));
     decodeThread.start();
@@ -71,6 +72,7 @@ public final class CaptureActivityHandler extends Handler {
 
     // Start ourselves capturing previews and decoding.
     this.cameraManager = cameraManager;
+//    开启预览
     cameraManager.startPreview();
     restartPreviewAndDecode();
   }
@@ -79,9 +81,11 @@ public final class CaptureActivityHandler extends Handler {
   public void handleMessage(Message message) {
     switch (message.what) {
       case R.id.restart_preview:
+        //重新取一帧图像并执行解码
         restartPreviewAndDecode();
         break;
       case R.id.decode_succeeded:
+        //解码成功
         state = State.SUCCESS;
         Bundle bundle = message.getData();
         Bitmap barcode = null;
@@ -98,46 +102,10 @@ public final class CaptureActivityHandler extends Handler {
         activity.handleDecode((Result) message.obj, barcode, scaleFactor);
         break;
       case R.id.decode_failed:
-        // We're decoding as fast as possible, so when one decode fails, start another.
+        //解码失败
         state = State.PREVIEW;
+        // 我们正在尽可能快地解码，所以当一个解码失败时，请启动另一个解码
         cameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
-        break;
-      case R.id.return_scan_result:
-        activity.setResult(Activity.RESULT_OK, (Intent) message.obj);
-        activity.finish();
-        break;
-      case R.id.launch_product_query:
-        String url = (String) message.obj;
-
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.addFlags(Intents.FLAG_NEW_DOC);
-        intent.setData(Uri.parse(url));
-
-        ResolveInfo resolveInfo =
-            activity.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
-        String browserPackageName = null;
-        if (resolveInfo != null && resolveInfo.activityInfo != null) {
-          browserPackageName = resolveInfo.activityInfo.packageName;
-          Log.d(TAG, "Using browser in package " + browserPackageName);
-        }
-
-        // Needed for default Android browser / Chrome only apparently
-        if (browserPackageName != null) {
-          switch (browserPackageName) {
-            case "com.android.browser":
-            case "com.android.chrome":
-              intent.setPackage(browserPackageName);
-              intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-              intent.putExtra(Browser.EXTRA_APPLICATION_ID, browserPackageName);
-              break;
-          }
-        }
-
-        try {
-          activity.startActivity(intent);
-        } catch (ActivityNotFoundException ignored) {
-          Log.w(TAG, "Can't find anything to handle VIEW of URI");
-        }
         break;
     }
   }
@@ -159,10 +127,15 @@ public final class CaptureActivityHandler extends Handler {
     removeMessages(R.id.decode_failed);
   }
 
+  /**
+   * 开启预览并解码
+   */
   private void restartPreviewAndDecode() {
     if (state == State.SUCCESS) {
       state = State.PREVIEW;
+      //请求摄像头的一帧图像数据,注意这里传入的是decodeThread的handler
       cameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
+      //重绘扫码框控件
       activity.drawViewfinder();
     }
   }

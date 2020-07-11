@@ -738,7 +738,6 @@ id image
 id image_view
 id info
 id italic
-id launch_product_query
 id line1
 id line3
 id listMode

@@ -17,12 +17,12 @@
 package com.google.zxing.client.android;
 
 import android.app.Activity;
-import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.KeyEvent;
@@ -32,13 +32,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import com.google.zxing.client.android.camera.CameraManager;
 import com.google.zxing.client.android.result.ResultHandler;
-import com.google.zxing.client.android.result.URIResultHandler;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
 
@@ -68,7 +66,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   private Collection<BarcodeFormat> decodeFormats;
   private String characterSet;
   private InactivityTimer inactivityTimer;
-  private BeepManager beepManager;
   private AmbientLightManager ambientLightManager;
 
   ViewfinderView getViewfinderView() {
@@ -101,9 +98,14 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     //控制activity在一段时间无操作自动finish
     inactivityTimer = new InactivityTimer(this);
     //管理扫码后是否有声音和震动
-    beepManager = new BeepManager(this);
     //用来根据环境的明暗，自动开启关闭闪光灯
     ambientLightManager = new AmbientLightManager(this);
+
+    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+      setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    } else {
+      setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    }
   }
 
   @Override
@@ -122,7 +124,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
     resetStatusView();
 
-    beepManager.updatePrefs();
     ambientLightManager.start(cameraManager);
 
     inactivityTimer.onResume();
@@ -147,7 +148,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     }
     inactivityTimer.onPause();
     ambientLightManager.stop();
-    beepManager.close();
     cameraManager.closeDriver();
     if (!hasSurface) {
       SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
@@ -240,7 +240,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     inactivityTimer.onActivity();
     lastResult = rawResult;
     ParsedResult result = ResultParser.parseResult(rawResult);
-    ResultHandler resultHandler = new URIResultHandler(this, result);
+    ResultHandler resultHandler = new ResultHandler(this, result);
     handleDecodeInternally(rawResult, resultHandler, barcode);
   }
 

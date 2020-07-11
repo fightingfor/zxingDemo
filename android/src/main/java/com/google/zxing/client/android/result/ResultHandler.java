@@ -17,25 +17,13 @@
 package com.google.zxing.client.android.result;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.preference.PreferenceManager;
-import android.provider.ContactsContract;
-import android.util.Log;
 
 import com.google.zxing.Result;
-import com.google.zxing.client.android.Intents;
-import com.google.zxing.client.android.PreferencesActivity;
-import com.google.zxing.client.android.R;
+import com.google.zxing.client.android.PreferencesManager;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ParsedResultType;
-import com.google.zxing.client.result.ResultParser;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 /**
  * A base class for the Android-specific barcode handlers. These allow the app to polymorphically
@@ -48,40 +36,17 @@ import java.net.URLEncoder;
  * @author dswitkin@google.com (Daniel Switkin)
  * @author Sean Owen
  */
-public abstract class ResultHandler {
+public  class ResultHandler {
 
   private static final String TAG = ResultHandler.class.getSimpleName();
 
-  private static final String[] EMAIL_TYPE_STRINGS = {"home", "work", "mobile"};
-  private static final String[] PHONE_TYPE_STRINGS = {"home", "work", "mobile", "fax", "pager", "main"};
-  private static final String[] ADDRESS_TYPE_STRINGS = {"home", "work"};
-  private static final int[] EMAIL_TYPE_VALUES = {
-      ContactsContract.CommonDataKinds.Email.TYPE_HOME,
-      ContactsContract.CommonDataKinds.Email.TYPE_WORK,
-      ContactsContract.CommonDataKinds.Email.TYPE_MOBILE,
-  };
-  private static final int[] PHONE_TYPE_VALUES = {
-      ContactsContract.CommonDataKinds.Phone.TYPE_HOME,
-      ContactsContract.CommonDataKinds.Phone.TYPE_WORK,
-      ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE,
-      ContactsContract.CommonDataKinds.Phone.TYPE_FAX_WORK,
-      ContactsContract.CommonDataKinds.Phone.TYPE_PAGER,
-      ContactsContract.CommonDataKinds.Phone.TYPE_MAIN,
-  };
-  private static final int[] ADDRESS_TYPE_VALUES = {
-      ContactsContract.CommonDataKinds.StructuredPostal.TYPE_HOME,
-      ContactsContract.CommonDataKinds.StructuredPostal.TYPE_WORK,
-  };
-  private static final int NO_TYPE = -1;
-
-  public static final int MAX_BUTTON_COUNT = 4;
 
   private final ParsedResult result;
   private final Activity activity;
   private final Result rawResult;
   private final String customProductSearch;
 
-  ResultHandler(Activity activity, ParsedResult result) {
+  public ResultHandler(Activity activity, ParsedResult result) {
     this(activity, result, null);
   }
 
@@ -90,10 +55,6 @@ public abstract class ResultHandler {
     this.activity = activity;
     this.rawResult = rawResult;
     this.customProductSearch = parseCustomSearchURL();
-  }
-
-  public final ParsedResult getResult() {
-    return result;
   }
 
 
@@ -117,56 +78,9 @@ public abstract class ResultHandler {
   }
 
 
-
-  final void openURL(String url) {
-    // Strangely, some Android browsers don't seem to register to handle HTTP:// or HTTPS://.
-    // Lower-case these as it should always be OK to lower-case these schemes.
-    if (url.startsWith("HTTP://")) {
-      url = "http" + url.substring(4);
-    } else if (url.startsWith("HTTPS://")) {
-      url = "https" + url.substring(5);
-    }
-    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-    try {
-      launchIntent(intent);
-    } catch (ActivityNotFoundException ignored) {
-      Log.w(TAG, "Nothing available to handle " + intent);
-    }
-  }
-
-
-  /**
-   * Like {@link #launchIntent(Intent)} but will tell you if it is not handle-able
-   * via {@link ActivityNotFoundException}.
-   *
-   * @throws ActivityNotFoundException if Intent can't be handled
-   */
-  final void rawLaunchIntent(Intent intent) {
-    if (intent != null) {
-      intent.addFlags(Intents.FLAG_NEW_DOC);
-      activity.startActivity(intent);
-    }
-  }
-
-  /**
-   * Like {@link #rawLaunchIntent(Intent)} but will show a user dialog if nothing is available to handle.
-   */
-  final void launchIntent(Intent intent) {
-    try {
-      rawLaunchIntent(intent);
-    } catch (ActivityNotFoundException ignored) {
-      AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-      builder.setTitle(R.string.app_name);
-      builder.setMessage(R.string.msg_intent_failed);
-      builder.setPositiveButton(R.string.button_ok, null);
-      builder.show();
-    }
-  }
-
-
   private String parseCustomSearchURL() {
     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
-    String customProductSearch = prefs.getString(PreferencesActivity.KEY_CUSTOM_PRODUCT_SEARCH,
+    String customProductSearch = prefs.getString(PreferencesManager.KEY_CUSTOM_PRODUCT_SEARCH,
         null);
     if (customProductSearch != null && customProductSearch.trim().isEmpty()) {
       return null;
@@ -174,26 +88,4 @@ public abstract class ResultHandler {
     return customProductSearch;
   }
 
-  final String fillInCustomSearchURL(String text) {
-    if (customProductSearch == null) {
-      return text; // ?
-    }
-    try {
-      text = URLEncoder.encode(text, "UTF-8");
-    } catch (UnsupportedEncodingException e) {
-      // can't happen; UTF-8 is always supported. Continue, I guess, without encoding      
-    }
-    String url = customProductSearch;
-    if (rawResult != null) {
-      // Replace %f but only if it doesn't seem to be a hex escape sequence. This remains
-      // problematic but avoids the more surprising problem of breaking escapes
-      url = url.replaceFirst("%f(?![0-9a-f])", rawResult.getBarcodeFormat().toString());
-      if (url.contains("%t")) {
-        ParsedResult parsedResultAgain = ResultParser.parseResult(rawResult);
-        url = url.replace("%t", parsedResultAgain.getType().toString());
-      }
-    }
-    // Replace %s last as it might contain itself %f or %t
-    return url.replace("%s", text);
-  }
 }
