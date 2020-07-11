@@ -59,7 +59,7 @@
         android:logo="@drawable/launcher_icon"
         android:testOnly="true" >
         <activity
-            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:name="com.google.zxing.client.android.QrCaptureActivity"
             android:clearTaskOnLaunch="true"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"

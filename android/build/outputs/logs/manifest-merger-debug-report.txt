@@ -124,7 +124,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ad
 		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:48:9-35
 	android:logo
 		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:51:9-47
-activity#com.google.zxing.client.android.CaptureActivity
+activity#com.google.zxing.client.android.QrCaptureActivity
 ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:52:9-115:20
 	android:screenOrientation
 		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:55:13-49
@@ -137,7 +137,7 @@ ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:52:9-115:20
 	android:theme
 		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:57:13-48
 	android:name
-		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:53:13-44
+		ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:53:13-46
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from E:\saoyisao\zingDemo\android\src\main\AndroidManifest.xml:59:13-62:29
 action#android.intent.action.MAIN

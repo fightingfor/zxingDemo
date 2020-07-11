@@ -17,7 +17,7 @@
 package com.google.zxing.client.android;
 
 import com.google.zxing.ResultPoint;
-import com.google.zxing.client.android.camera.CameraManager;
+import com.google.zxing.client.android.camera.QrCameraManager;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -46,7 +46,7 @@ public final class ViewfinderView extends View {
   private static final int MAX_RESULT_POINTS = 20;
   private static final int POINT_SIZE = 6;
 
-  private CameraManager cameraManager;
+  private QrCameraManager cameraManager;
   private final Paint paint;
   private Bitmap resultBitmap;
   private final int maskColor;
@@ -73,7 +73,7 @@ public final class ViewfinderView extends View {
     lastPossibleResultPoints = null;
   }
 
-  public void setCameraManager(CameraManager cameraManager) {
+  public void setCameraManager(QrCameraManager cameraManager) {
     this.cameraManager = cameraManager;
   }
 

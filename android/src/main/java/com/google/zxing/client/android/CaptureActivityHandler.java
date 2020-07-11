@@ -16,24 +16,17 @@
 
 package com.google.zxing.client.android;
 
-import android.content.ActivityNotFoundException;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.BitmapFactory;
-import android.provider.Browser;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.Result;
-import com.google.zxing.client.android.camera.CameraManager;
+import com.google.zxing.client.android.camera.QrCameraManager;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 
 import java.util.Collection;
 import java.util.Map;
@@ -47,10 +40,10 @@ public final class CaptureActivityHandler extends Handler {
 
   private static final String TAG = CaptureActivityHandler.class.getSimpleName();
 
-  private final CaptureActivity activity;
+  private final QrCaptureActivity activity;
   private final DecodeThread decodeThread;
   private State state;
-  private final CameraManager cameraManager;
+  private final QrCameraManager qrCameraManager;
 
   private enum State {
     PREVIEW,
@@ -58,11 +51,11 @@ public final class CaptureActivityHandler extends Handler {
     DONE
   }
 
-  CaptureActivityHandler(CaptureActivity activity,
+  CaptureActivityHandler(QrCaptureActivity activity,
                          Collection<BarcodeFormat> decodeFormats,
                          Map<DecodeHintType,?> baseHints,
                          String characterSet,
-                         CameraManager cameraManager) {
+                         QrCameraManager qrCameraManager) {
     this.activity = activity;
 //    开启一个解码线程
     decodeThread = new DecodeThread(activity, decodeFormats, baseHints, characterSet,
@@ -71,9 +64,9 @@ public final class CaptureActivityHandler extends Handler {
     state = State.SUCCESS;
 
     // Start ourselves capturing previews and decoding.
-    this.cameraManager = cameraManager;
+    this.qrCameraManager = qrCameraManager;
 //    开启预览
-    cameraManager.startPreview();
+    qrCameraManager.startPreview();
     restartPreviewAndDecode();
   }
 
@@ -105,14 +98,14 @@ public final class CaptureActivityHandler extends Handler {
         //解码失败
         state = State.PREVIEW;
         // 我们正在尽可能快地解码，所以当一个解码失败时，请启动另一个解码
-        cameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
+        qrCameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
         break;
     }
   }
 
   public void quitSynchronously() {
     state = State.DONE;
-    cameraManager.stopPreview();
+    qrCameraManager.stopPreview();
     Message quit = Message.obtain(decodeThread.getHandler(), R.id.quit);
     quit.sendToTarget();
     try {
@@ -134,7 +127,7 @@ public final class CaptureActivityHandler extends Handler {
     if (state == State.SUCCESS) {
       state = State.PREVIEW;
       //请求摄像头的一帧图像数据,注意这里传入的是decodeThread的handler
-      cameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
+      qrCameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
       //重绘扫码框控件
       activity.drawViewfinder();
     }
