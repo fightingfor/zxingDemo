@@ -121,6 +121,9 @@ attr contentInsetRight
 attr contentInsetStart
 attr contentInsetStartWithNavigation
 attr controlBackground
+attr cornerColor
+attr cornerRectHeight
+attr cornerRectWidth
 attr customNavigationLayout
 attr defaultQueryHint
 attr dialogCornerRadius
@@ -160,8 +163,15 @@ attr fontProviderQuery
 attr fontStyle
 attr fontVariationSettings
 attr fontWeight
+attr frameColor
+attr frameHeight
+attr frameLineWidth
+attr frameRatio
+attr frameWidth
 attr gapBetweenBars
 attr goIcon
+attr gridColumn
+attr gridHeight
 attr height
 attr hideOnContentScroll
 attr homeAsUpIndicator
@@ -175,6 +185,13 @@ attr indeterminateProgressStyle
 attr initialActivityCount
 attr isLightTheme
 attr itemPadding
+attr labelText
+attr labelTextColor
+attr labelTextLocation
+attr labelTextPadding
+attr labelTextSize
+attr laserColor
+attr laserStyle
 attr lastBaselineToBottomHeight
 attr layout
 attr lineHeight
@@ -195,6 +212,7 @@ attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
 attr logo
 attr logoDescription
+attr maskColor
 attr maxButtonHeight
 attr measureWithLargestChild
 attr menu
@@ -223,6 +241,10 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr resultPointColor
+attr scannerAnimationDelay
+attr scannerLineHeight
+attr scannerLineMoveDistance
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -231,6 +253,7 @@ attr selectableItemBackground
 attr selectableItemBackgroundBorderless
 attr showAsAction
 attr showDividers
+attr showResultPoint
 attr showText
 attr showTitle
 attr singleChoiceItemLayout
@@ -725,6 +748,7 @@ id end
 id expand_activities_button
 id expanded_menu
 id forever
+id grid
 id group_divider
 id help_contents
 id history_detail
@@ -738,6 +762,7 @@ id image
 id image_view
 id info
 id italic
+id line
 id line1
 id line3
 id listMode
@@ -1447,4 +1472,5 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable ViewfinderView cornerColor cornerRectHeight cornerRectWidth frameColor frameHeight frameLineWidth frameRatio frameWidth gridColumn gridHeight labelText labelTextColor labelTextLocation labelTextPadding labelTextSize laserColor laserStyle maskColor resultPointColor scannerAnimationDelay scannerLineHeight scannerLineMoveDistance showResultPoint
 xml preferences

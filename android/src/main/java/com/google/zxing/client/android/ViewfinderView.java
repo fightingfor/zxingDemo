@@ -27,6 +27,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -56,6 +57,18 @@ public final class ViewfinderView extends View {
   private int scannerAlpha;
   private List<ResultPoint> possibleResultPoints;
   private List<ResultPoint> lastPossibleResultPoints;
+  /**
+   * 扫码框四角颜色
+   */
+  private int cornerColor;
+  /**
+   * 扫描区边角的宽
+   */
+  private int cornerRectWidth;
+  /**
+   * 扫描区边角的高
+   */
+  private int cornerRectHeight;
 
   // This constructor is used when the class is built from an XML resource.
   public ViewfinderView(Context context, AttributeSet attrs) {
@@ -71,9 +84,13 @@ public final class ViewfinderView extends View {
     scannerAlpha = 0;
     possibleResultPoints = new ArrayList<>(5);
     lastPossibleResultPoints = null;
+
+    cornerRectWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,16,getResources().getDisplayMetrics());
+    cornerRectHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,16,getResources().getDisplayMetrics());
+    cornerColor =  resources.getColor(R.color.possible_result_points);
   }
 
-  public void setCameraManager(QrCameraManager cameraManager) {
+  public void setQrCameraManager(QrCameraManager cameraManager) {
     this.cameraManager = cameraManager;
   }
 
@@ -88,15 +105,10 @@ public final class ViewfinderView extends View {
     if (frame == null || previewFrame == null) {
       return;
     }
-    int width = canvas.getWidth();
-    int height = canvas.getHeight();
-
-    // Draw the exterior (i.e. outside the framing rect) darkened
-    paint.setColor(resultBitmap != null ? resultColor : maskColor);
-    canvas.drawRect(0, 0, width, frame.top, paint);
-    canvas.drawRect(0, frame.top, frame.left, frame.bottom + 1, paint);
-    canvas.drawRect(frame.right + 1, frame.top, width, frame.bottom + 1, paint);
-    canvas.drawRect(0, frame.bottom + 1, width, height, paint);
+    //绘制覆盖颜色
+    drawCover(canvas,frame);
+    // 绘制边角
+    drawCorner(canvas, frame);
 
     if (resultBitmap != null) {
       // Draw the opaque result bitmap over the scanning rectangle
@@ -110,41 +122,6 @@ public final class ViewfinderView extends View {
       scannerAlpha = (scannerAlpha + 1) % SCANNER_ALPHA.length;
       int middle = frame.height() / 2 + frame.top;
       canvas.drawRect(frame.left + 2, middle - 1, frame.right - 1, middle + 2, paint);
-      
-      float scaleX = frame.width() / (float) previewFrame.width();
-      float scaleY = frame.height() / (float) previewFrame.height();
-
-      List<ResultPoint> currentPossible = possibleResultPoints;
-      List<ResultPoint> currentLast = lastPossibleResultPoints;
-      int frameLeft = frame.left;
-      int frameTop = frame.top;
-      if (currentPossible.isEmpty()) {
-        lastPossibleResultPoints = null;
-      } else {
-        possibleResultPoints = new ArrayList<>(5);
-        lastPossibleResultPoints = currentPossible;
-        paint.setAlpha(CURRENT_POINT_OPACITY);
-        paint.setColor(resultPointColor);
-        synchronized (currentPossible) {
-          for (ResultPoint point : currentPossible) {
-            canvas.drawCircle(frameLeft + (int) (point.getX() * scaleX),
-                              frameTop + (int) (point.getY() * scaleY),
-                              POINT_SIZE, paint);
-          }
-        }
-      }
-      if (currentLast != null) {
-        paint.setAlpha(CURRENT_POINT_OPACITY / 2);
-        paint.setColor(resultPointColor);
-        synchronized (currentLast) {
-          float radius = POINT_SIZE / 2.0f;
-          for (ResultPoint point : currentLast) {
-            canvas.drawCircle(frameLeft + (int) (point.getX() * scaleX),
-                              frameTop + (int) (point.getY() * scaleY),
-                              radius, paint);
-          }
-        }
-      }
 
       // Request another update at the animation interval, but only repaint the laser line,
       // not the entire viewfinder mask.
@@ -154,6 +131,49 @@ public final class ViewfinderView extends View {
                             frame.right + POINT_SIZE,
                             frame.bottom + POINT_SIZE);
     }
+  }
+
+  /**
+   * 绘制四个角
+   * @param canvas
+   * @param frame
+   */
+  private void drawCorner(Canvas canvas, Rect frame) {
+    paint.setColor(cornerColor);
+    int diffWidth = cornerRectWidth / 2;
+    //左上
+    canvas.drawRect(frame.left - diffWidth, frame.top -diffWidth, frame.left + diffWidth, frame.top + cornerRectHeight -diffWidth, paint);
+    canvas.drawRect(frame.left - diffWidth, frame.top -diffWidth, frame.left + cornerRectHeight -diffWidth, frame.top + diffWidth, paint);
+    //右上
+    canvas.drawRect(frame.right - diffWidth, frame.top -diffWidth , frame.right + diffWidth, frame.top + cornerRectHeight -diffWidth, paint);
+    canvas.drawRect(frame.right - cornerRectHeight - diffWidth, frame.top -diffWidth  , frame.right + diffWidth , frame.top  +diffWidth, paint);
+    //左下
+    canvas.drawRect(frame.left -diffWidth, frame.bottom - diffWidth, frame.left + cornerRectHeight -diffWidth, frame.bottom +diffWidth, paint);
+    canvas.drawRect(frame.left -diffWidth, frame.bottom - cornerRectHeight +diffWidth, frame.left + diffWidth, frame.bottom +diffWidth, paint);
+    //右下
+    canvas.drawRect(frame.right - diffWidth, frame.bottom - cornerRectHeight +diffWidth, frame.right +diffWidth, frame.bottom +diffWidth, paint);
+    canvas.drawRect(frame.right - cornerRectHeight +diffWidth, frame.bottom - diffWidth, frame.right +diffWidth, frame.bottom + diffWidth, paint);
+  }
+
+  /**
+   * 绘制遮掩层
+   */
+  private void drawCover(Canvas canvas, Rect frame) {
+
+    // 获取屏幕的宽和高
+    int width = canvas.getWidth();
+    int height = canvas.getHeight();
+
+    // Draw the exterior (i.e. outside the framing rect) darkened
+    paint.setColor(resultBitmap != null ? resultColor : maskColor);
+
+    // 画出扫描框外面的阴影部分，共四个部分，扫描框的上面到屏幕上面，扫描框的下面到屏幕下面
+    // 扫描框的左边面到屏幕左边，扫描框的右边到屏幕右边
+    canvas.drawRect(0, 0, width, frame.top, paint);
+    canvas.drawRect(0, frame.top, frame.left, frame.bottom + 1, paint);
+    canvas.drawRect(frame.right + 1, frame.top, width, frame.bottom + 1,
+            paint);
+    canvas.drawRect(0, frame.bottom + 1, width, height, paint);
   }
 
   public void drawViewfinder() {
